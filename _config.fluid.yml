@@ -1,0 +1,27 @@
+# ==========================================
+# Module: _config.fluid.yml
+# Purpose: Hexo Theme Fluid 用户配置（覆盖主题默认配置）
+# Usage:
+#   1) 确保站点 _config.yml 中设置 theme: fluid
+#   2) 在此文件中按需覆盖主题配置项（未写的项将沿用主题默认值）
+# Example:
+#   dark_mode:
+#     enable: true
+# ==========================================
+
+# 主题暗色模式
+dark_mode:
+  enable: true
+  default: auto
+
+# 代码块增强：复制按钮 + 行号（与 Hexo 自身高亮无关，属于主题侧展示）
+code:
+  copy_btn: true
+  highlight:
+    enable: true
+    line_number: true
+    lib: "highlightjs"
+
+# 本地搜索（如果你后续改用其他搜索插件/方案，记得把这里关掉，避免生成多余索引）
+search:
+  enable: true
