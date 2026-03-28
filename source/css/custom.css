@@ -1,0 +1,24 @@
+/*
+ * ==========================================
+ * Module: source/css/custom.css
+ * Purpose: 自定义关于页头像与简介样式
+ * Usage:
+ *   1) 由 _config.fluid.yml 中的 custom_css 自动加载
+ *   2) 主要用于关于页空简介隐藏与头像显示优化
+ * ==========================================
+ */
+
+.about-info .about-intro:empty {
+  display: none;
+}
+
+.about-avatar {
+  width: 12rem;
+  height: 12rem;
+}
+
+.about-avatar img {
+  border-radius: 18px;
+  object-fit: cover;
+  object-position: center top;
+}

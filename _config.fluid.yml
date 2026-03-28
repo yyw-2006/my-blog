@@ -25,3 +25,52 @@ code:
 # 本地搜索（如果你后续改用其他搜索插件/方案，记得把这里关掉，避免生成多余索引）
 search:
   enable: true
+
+# 导航栏
+navbar:
+  blog_title: "药吖"
+
+# 自定义样式
+custom_css:
+  - /css/custom.css
+
+# 关于页信息
+about:
+  banner_img: /img/home-banner.png
+  avatar: /img/yaoya-avatar.png
+  name: "药吖"
+  introduce: ""
+  intro: ""
+  icons:
+    - { class: "iconfont icon-github-fill", link: "https://github.com/yyw-2006", tip: "GitHub" }
+
+post:
+  banner_img: /img/home-banner.png
+
+archive:
+  banner_img: /img/home-banner.png
+
+category:
+  banner_img: /img/home-banner.png
+
+tag:
+  banner_img: /img/home-banner.png
+
+page:
+  banner_img: /img/home-banner.png
+
+page404:
+  banner_img: /img/home-banner.png
+
+links:
+  banner_img: /img/home-banner.png
+
+#首页文本
+index:
+  banner_img: /img/home-banner.png
+  slogan:
+    text: "保持好奇，保持热爱"
+
+# 页脚
+footer:
+  content: ""
