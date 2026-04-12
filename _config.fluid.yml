@@ -46,6 +46,10 @@ about:
 
 post:
   banner_img: /img/home-banner.png
+  math:
+    enable: true
+    specific: true
+    engine: katex
 
 archive:
   banner_img: /img/home-banner.png
