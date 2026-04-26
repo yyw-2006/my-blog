@@ -57,3 +57,20 @@ $$
 ## 解码器
 
 解码器做什么：按时间步生成输出y₁,y₂,…。每一步先对“已生成的输出前缀”做 masked self-attention（只能看见左边的词，不能偷看未来），再去“看”编码器输出H，最后预测下一个词。
+
+## 前馈网络（FFN）
+
+在 attention 把“该看谁”处理完之后，再对每个位置的特征做一次更强的非线性加工。
+FFN(x) = W2 * activation(W1 * x + b1) + b2
+先线性变换一次，过激活函数，再线性变换一次。之前看CNN提到激活函数用于将线性变为非线性
+
+## Transformer 整体结构图
+
+- Input Embedding 把词变成向量
+- Positional Encoding 给模型加入位置信息
+- Multi-Head Attention 用来让一个词关注句子里其他词，捕捉关系
+- Feed Forward 是逐位置的前馈网络，进一步做特征变换
+- Add & Norm 表示 残差连接 + LayerNorm，作用是让训练更稳定
+- Masked Multi-Head Attention。这里的 Masked 表示生成当前词时，只能看见前面已经生成的词，不能偷看后面的正确答案
+
+![Transformer架构图](/img/Transformer/Transformer架构图.png)
