@@ -35,7 +35,7 @@ navbar:
     - { key: "category", link: "/categories/", icon: "iconfont icon-category-fill" }
     - { key: "tag", link: "/tags/", icon: "iconfont icon-tags-fill" }
     - { key: "about", link: "/about/", icon: "iconfont icon-user-fill" }
-    - { name: "AfterBlackout", link: "/afterblackout/" }
+    - { name: "作品集", link: "https://portfolio.yaoyablog.xyz/" }
 
 # 自定义样式
 custom_css:

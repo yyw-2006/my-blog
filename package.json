@@ -4,9 +4,12 @@
   "private": true,
   "scripts": {
     "build": "hexo generate",
+    "build:portfolio": "hexo generate --config _config.yml,_config.portfolio.yml",
     "clean": "hexo clean",
+    "clean:portfolio": "hexo clean --config _config.yml,_config.portfolio.yml",
     "deploy": "hexo deploy",
-    "server": "hexo server"
+    "server": "hexo server",
+    "server:portfolio": "hexo server --config _config.yml,_config.portfolio.yml"
   },
   "hexo": {
     "version": "8.1.1"

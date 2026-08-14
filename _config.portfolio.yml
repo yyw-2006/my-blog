@@ -1,0 +1,38 @@
+# Portfolio-only Hexo configuration.
+# Cloudflare Pages can build this site with:
+#   npm run build:portfolio
+# and publish the public-portfolio directory.
+
+url: https://portfolio.yaoyablog.xyz
+root: /
+source_dir: source-portfolio
+public_dir: public-portfolio
+permalink: :title/
+index_generator:
+  path: ''
+  per_page: 1
+  order_by: -date
+
+theme_config:
+  dark_mode:
+    enable: true
+    default: auto
+  navbar:
+    blog_title: "个人作品集"
+    menu:
+      - { name: "博客", link: "https://yaoyablog.xyz/", icon: "iconfont icon-home-fill" }
+      - { name: "GitHub", link: "https://github.com/yyw-2006", icon: "iconfont icon-github-fill" }
+  custom_css:
+    - /css/portfolio.css
+  custom_js:
+    - /js/portfolio.js
+  index:
+    banner_img: https://yaoyablog.xyz/img/home-banner.png
+    banner_img_height: 45
+    slogan:
+      text: "你的名字｜Unity 游戏客户端作品集"
+  page:
+    banner_img: https://yaoyablog.xyz/img/home-banner.png
+    banner_img_height: 35
+  footer:
+    content: ""
