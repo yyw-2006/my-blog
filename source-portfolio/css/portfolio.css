@@ -173,7 +173,7 @@
   border-top: 0;
 }
 
-.portfolio-project-card-reverse .portfolio-project-media {
+.portfolio-project-card-reverse .portfolio-project-media-column {
   order: 2;
 }
 
@@ -182,11 +182,36 @@
 }
 
 .portfolio-project-media {
-  min-height: 250px;
+  min-height: 0;
+  aspect-ratio: 16 / 9;
+  align-self: start;
   overflow: hidden;
   border: 1px solid var(--portfolio-border);
   border-radius: 18px;
   background: linear-gradient(135deg, #182532, #2e6d89 52%, #8c6b91);
+}
+
+.portfolio-project-media-column {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-self: start;
+  min-width: 0;
+}
+
+.portfolio-project-cover {
+  overflow: hidden;
+  border: 1px solid var(--portfolio-border);
+  border-radius: 18px;
+  background: #182532;
+  line-height: 0;
+}
+
+.portfolio-project-cover img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .portfolio-video-placeholder {
@@ -196,12 +221,87 @@
   justify-content: center;
   gap: 10px;
   height: 100%;
-  min-height: 250px;
+  min-height: 0;
   padding: 24px;
   color: #fff;
   text-align: center;
   cursor: pointer;
   background: linear-gradient(135deg, rgba(10, 18, 29, 0.62), rgba(40, 90, 115, 0.42));
+}
+
+.portfolio-media-empty {
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #172432, #27435b);
+}
+
+.portfolio-media-empty-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.88);
+  text-align: center;
+}
+
+.portfolio-media-empty-content small {
+  color: rgba(255, 255, 255, 0.58);
+}
+
+.portfolio-video-placeholder-poster {
+  position: relative;
+  display: block;
+  padding: 0;
+}
+
+.portfolio-video-placeholder-poster > img,
+.portfolio-image-media > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: cover;
+}
+
+.portfolio-video-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 24px;
+  color: #fff;
+  text-align: center;
+  background: linear-gradient(135deg, rgba(10, 18, 29, 0.56), rgba(40, 90, 115, 0.38));
+  transition: background 0.2s ease;
+}
+
+.portfolio-video-placeholder-poster:hover .portfolio-video-overlay {
+  background: linear-gradient(135deg, rgba(10, 18, 29, 0.36), rgba(80, 160, 190, 0.38));
+}
+
+.portfolio-image-media {
+  position: relative;
+  min-height: 0;
+  aspect-ratio: 16 / 9;
+  align-self: start;
+  overflow: hidden;
+  border: 1px solid var(--portfolio-border);
+  border-radius: 18px;
+  background: #182532;
+}
+
+.portfolio-image-badge {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(10, 18, 29, 0.72);
+  font-size: 0.76rem;
 }
 
 .portfolio-video-placeholder:hover {
@@ -227,7 +327,8 @@
 .portfolio-video-iframe {
   display: block;
   width: 100%;
-  min-height: 250px;
+  height: 100%;
+  min-height: 0;
   border: 0;
 }
 
@@ -271,12 +372,108 @@
   font-weight: 700;
 }
 
+.portfolio-project-detail {
+  margin-top: 0;
+  font-size: 0.92rem;
+}
+
+.portfolio-responsibilities-title {
+  margin: 6px 0 8px;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.portfolio-project-responsibilities {
+  margin: 0 0 18px;
+  padding-left: 1.25rem;
+  color: rgba(244, 247, 251, 0.78);
+  font-size: 0.9rem;
+  line-height: 1.75;
+}
+
+.portfolio-project-responsibilities li + li {
+  margin-top: 3px;
+}
+
+.portfolio-project-links,
+.portfolio-gamejam-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  align-items: center;
+}
+
+.portfolio-project-card-list {
+  display: block;
+}
+
+.portfolio-project-body-wide {
+  display: block;
+}
+
+.portfolio-gamejam-list {
+  display: grid;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.portfolio-gamejam-item {
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+  gap: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--portfolio-border);
+}
+
+.portfolio-gamejam-media {
+  min-height: 0;
+  aspect-ratio: 16 / 9;
+  align-self: start;
+}
+
+.portfolio-gamejam-media .portfolio-video-placeholder-poster > img,
+.portfolio-gamejam-media.portfolio-image-media > img {
+  min-height: 0;
+}
+
+.portfolio-gamejam-content {
+  align-self: center;
+}
+
+.portfolio-gamejam-content h4 {
+  margin: 0 0 6px;
+  color: #fff;
+  font-size: 1.3rem;
+}
+
+.portfolio-gamejam-content p {
+  margin: 0 0 12px;
+}
+
+.portfolio-gamejam-name {
+  color: var(--portfolio-accent-strong) !important;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
 .portfolio-next-step {
   text-align: center;
 }
 
-.portfolio-next-step .portfolio-button {
+.portfolio-next-step-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
   margin-top: 10px;
+}
+
+/* Fluid 默认使用 col-md-10；作品集卡片稍微扩展到 90% 宽度。 */
+@media (min-width: 768px) {
+  #board .col-md-10:has(.portfolio-page) {
+    flex: 0 0 90%;
+    max-width: 90%;
+  }
 }
 
 @media (max-width: 760px) {
@@ -295,11 +492,12 @@
   }
 
   .portfolio-info-grid,
-  .portfolio-project-card {
+  .portfolio-project-card,
+  .portfolio-gamejam-item {
     grid-template-columns: 1fr;
   }
 
-  .portfolio-project-card-reverse .portfolio-project-media,
+  .portfolio-project-card-reverse .portfolio-project-media-column,
   .portfolio-project-card-reverse .portfolio-project-body {
     order: initial;
   }
