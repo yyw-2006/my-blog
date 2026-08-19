@@ -57,6 +57,11 @@ post:
     enable: true
     specific: true
     engine: katex
+  mermaid:
+    enable: false
+    specific: false
+    options:
+      theme: default
 
 archive:
   banner_img: /img/home-banner.png
