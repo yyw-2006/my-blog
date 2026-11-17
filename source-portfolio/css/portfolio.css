@@ -425,6 +425,10 @@
   border-top: 1px solid var(--portfolio-border);
 }
 
+#kindred-town {
+  scroll-margin-top: 72px;
+}
+
 .portfolio-gamejam-media {
   min-height: 0;
   aspect-ratio: 16 / 9;
